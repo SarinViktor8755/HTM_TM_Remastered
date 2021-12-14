@@ -1,5 +1,6 @@
 buildscript {
-    
+
+
 
     repositories {
         mavenLocal()
@@ -13,7 +14,8 @@ buildscript {
         classpath 'org.gretty:gretty:3.0.2'
         classpath 'com.android.tools.build:gradle:4.2.2'
         classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.12'
-        
+
+        classpath 'com.google.gms:google-services:4.3.10'
 
     }
 }
@@ -39,6 +41,7 @@ allprojects {
         gradlePluginPortal()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
     }
 }
 
@@ -58,6 +61,8 @@ project(":desktop") {
 project(":android") {
     apply plugin: "com.android.application"
 
+    apply plugin: 'com.google.gms.google-services'
+
     configurations { natives }
 
     dependencies {
@@ -73,7 +78,12 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
         api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
-        
+
+        implementation platform('com.google.firebase:firebase-bom:29.0.2')
+        implementation 'com.google.firebase:firebase-analytics'
+
+
+
     }
 }
 
