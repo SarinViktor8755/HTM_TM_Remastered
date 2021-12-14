@@ -1,0 +1,19 @@
+
+groiund1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+zed
+  rotate: false
+  xy: 2, 2
+  size: 450, 188
+  orig: 450, 188
+  offset: 0, 0
+  index: -1
+ground1
+  rotate: false
+  xy: 2, 192
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1

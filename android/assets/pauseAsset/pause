@@ -1,0 +1,75 @@
+
+pause1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+helper
+  rotate: false
+  xy: 2, 2
+  size: 240, 427
+  orig: 240, 427
+  offset: 0, 0
+  index: -1
+vignette
+  rotate: false
+  xy: 244, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+victory
+  rotate: false
+  xy: 2, 431
+  size: 310, 58
+  orig: 310, 58
+  offset: 0, 0
+  index: -1
+plus
+  rotate: false
+  xy: 2, 491
+  size: 310, 58
+  orig: 310, 58
+  offset: 0, 0
+  index: -1
+lost
+  rotate: false
+  xy: 2, 551
+  size: 310, 58
+  orig: 310, 58
+  offset: 0, 0
+  index: -1
+first
+  rotate: false
+  xy: 2, 611
+  size: 310, 58
+  orig: 310, 58
+  offset: 0, 0
+  index: -1
+fight
+  rotate: false
+  xy: 2, 671
+  size: 310, 58
+  orig: 310, 58
+  offset: 0, 0
+  index: -1
+puse
+  rotate: false
+  xy: 2, 731
+  size: 268, 58
+  orig: 268, 58
+  offset: 0, 0
+  index: -1
+lostlead
+  rotate: false
+  xy: 2, 791
+  size: 268, 58
+  orig: 268, 58
+  offset: 0, 0
+  index: -1
+aim
+  rotate: false
+  xy: 374, 2
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1

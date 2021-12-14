@@ -1,0 +1,60 @@
+obstacles.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+logo
+  rotate: false
+  xy: 1, 263
+  size: 500, 196
+  orig: 500, 196
+  offset: 0, 0
+  index: -1
+obstacles7
+  rotate: false
+  xy: 1, 1
+  size: 131, 260
+  orig: 131, 260
+  offset: 0, 0
+  index: -1
+obstacles4
+  rotate: false
+  xy: 134, 39
+  size: 117, 222
+  orig: 117, 222
+  offset: 0, 0
+  index: -1
+obstacles3
+  rotate: false
+  xy: 253, 38
+  size: 115, 223
+  orig: 115, 223
+  offset: 0, 0
+  index: -1
+obstacles5
+  rotate: false
+  xy: 370, 31
+  size: 111, 230
+  orig: 111, 230
+  offset: 0, 0
+  index: -1
+obstacles6
+  rotate: false
+  xy: 503, 230
+  size: 105, 229
+  orig: 105, 229
+  offset: 0, 0
+  index: -1
+obstacles1
+  rotate: false
+  xy: 610, 233
+  size: 102, 226
+  orig: 102, 226
+  offset: 0, 0
+  index: -1
+obstacles2
+  rotate: false
+  xy: 714, 233
+  size: 102, 226
+  orig: 102, 226
+  offset: 0, 0
+  index: -1
