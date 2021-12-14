@@ -112,26 +112,38 @@ public class PauseScreen implements Screen {
 
 
         if (Gdx.files.internal("audio/rockroll.ogg").exists())
-            music = Gdx.audio.newMusic(Gdx.files.internal("audio/rockroll.ogg"));
+            try {
+                music = Gdx.audio.newMusic(Gdx.files.internal("audio/rockroll.ogg"));
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
+
         //System.out.println("adShow  % " + adShow);
 
     }
 
     private void updaeteVolmeMusic() {
-        if (!music.isLooping()) {
-            music.play();
-            music.setVolume(0);
-            music.setLooping(true);
-        }
-        if (timer / 3 <= 1) {
-            music.setVolume(timer / 3);
-            textAlpha = Interpolation.fade.apply(timer / 3);
-        } else {
-            textAlpha = 1;
-            if ((durationPause / 1000 - timer) / 3 <= 1) {
-                music.setVolume((durationPause / 1000 - timer) / 3);
-                textAlpha = (durationPause / 1000 - timer) / 3;
+        try {
+
+
+            if (!music.isLooping()) {
+                music.play();
+                music.setVolume(0);
+                music.setLooping(true);
             }
+            if (timer / 3 <= 1) {
+                music.setVolume(timer / 3);
+                textAlpha = Interpolation.fade.apply(timer / 3);
+            } else {
+                textAlpha = 1;
+                if ((durationPause / 1000 - timer) / 3 <= 1) {
+                    music.setVolume((durationPause / 1000 - timer) / 3);
+                    textAlpha = (durationPause / 1000 - timer) / 3;
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            //System.out.println("");
         }
     }
 

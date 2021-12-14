@@ -35,13 +35,10 @@ public class MainClient {
     public MainClient(MainGaming mg) {
         pingError = 0;
         this.mg = mg;
-
         client = new Client();
         client.start();
-
         // FrameworkMessage.Ping ping = new FrameworkMessage.Ping();
         Network.register(client);
-
         client.addListener(new Listener() {
 
             public void connected(Connection connection) {
@@ -60,6 +57,7 @@ public class MainClient {
         outStock = new StockRequestService(mg);
         // messageQueue = new MessageQueue();
     }
+
 
 
     public boolean reconnect() {
@@ -121,7 +119,6 @@ public class MainClient {
 
     public boolean coonectToServer() {
         try {
-
             client.start();
             client.connect(5000, Network.ip, Network.tcpPort, Network.udpPort);
             //client.start();
@@ -170,17 +167,9 @@ public class MainClient {
             return;
         }
         PleyerPosition ps = new PleyerPosition();
-        updatePingError();
-
         ps.xp = Integer.valueOf((int) (mg.getHero().getPosition().x));
         ps.yp = Integer.valueOf((int) (mg.getHero().getPosition().y));
         ps.rot = Integer.valueOf((int) mg.getHero().getCookAngle().angle());
-
-        //System.out.println("-------------------------");
-//        System.out.println(ps.xp);
-//        System.out.println(ps.yp);
-//        System.out.println(ps.rot);
-
         client.sendUDP(ps);
 
         // Gdx.app.error("MyTag", String.valueOf(pingError));
@@ -197,24 +186,6 @@ public class MainClient {
     }
 
     public void sendToServer(Integer tip, Integer p2, Integer p3, Integer p4, Integer p5, Integer p6, Integer p7, Integer p8, String text){
-       // System.out.println(text);
-//        System.out.println("!!!!!!!!!!!!!!!");
-//        RequestStock requestStock = new RequestStock(// отправить на сервер
-//                mg.getMainClient().getAndUpdateRealTime(),tip,p2,p3,p4,p5,p6,p7,p8,text);
-//        mg.getMainClient().getOutStock().addStockInQuery(requestStock);
-//        System.out.println(requestStock);
-
-//////////////////////////////////////////////////
-//        mg.getMainClient().getOutStock().addStockInQuery(new RequestStock(// отправить на сервер
-//                mg.getMainClient().getAndUpdateRealTime(),
-//                -31,
-//                2, 3,
-//                3213, null, null, null, null,
-//                null
-//        ));
-
-
-
         mg.getMainClient().getOutStock().addStockInQuery(new RequestStock(// отправить на сервер
                 mg.getMainClient().getAndUpdateRealTime(), -31,
                 65, null,
@@ -295,7 +266,6 @@ public class MainClient {
             int xp = ((PleyerPositionNom) object).xp;
             int yp = ((PleyerPositionNom) object).yp;
             int rp = ((PleyerPositionNom) object).rot;
-
 
             try {
                 if (nom == mg.getMainClient().myIdConnect) return;

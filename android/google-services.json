@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "405768170899",
+    "project_id": "hotline-team-battel-remastered",
+    "storage_bucket": "hotline-team-battel-remastered.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405768170899:android:32fc146da731b35ff94c66",
+        "android_client_info": {
+          "package_name": "com.HotLine.Team.Battle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405768170899-ga81pddbj23jlkchkdj03ba3m61emci3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMyL2vrGb6kO6-C3gPqHjkM3JrZ9nULqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405768170899-ga81pddbj23jlkchkdj03ba3m61emci3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

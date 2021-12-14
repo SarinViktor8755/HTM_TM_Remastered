@@ -10,12 +10,10 @@ public class DesktopLauncher implements AdAds {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.title = "HotLine Team Battle";
 
-
 		config.width = ZombiKiller.WHIDE_SCREEN /2;
 		config.height = ZombiKiller.HIDE_SCREEN /2;
 
 		new LwjglApplication(new ZombiKiller(3), config);
-
 	}
 
 	@Override
