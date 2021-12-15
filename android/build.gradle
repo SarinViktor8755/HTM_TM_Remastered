@@ -1,6 +1,11 @@
 android {
     buildToolsVersion "30.0.2"
     compileSdkVersion 30
+
+
+
+
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -92,7 +97,10 @@ task run(type: Exec) {
 eclipse.project.name = appName + "-android"
 
 dependencies {
-    api 'com.google.android.gms:play-services-ads:11.2.0'
+
+
+    implementation "com.google.android.gms:play-services-base:11.2.0"
+    implementation "com.google.android.gms:play-services-ads:11.2.0"
     //compile 'com.android.billingclient:billing:$billing_version'
     api group: 'com.android.billingclient', name: 'billing', version: '2.2.1'
 }

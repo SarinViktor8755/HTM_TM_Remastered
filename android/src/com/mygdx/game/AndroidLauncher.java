@@ -27,7 +27,8 @@ public class AndroidLauncher extends AndroidApplication implements AdAds {
 		// initFlavor(ZombiKiller);
 		initialize(new ZombiKiller(1,this), config);
 		////////////////////////////////////////////////////
-		MobileAds.initialize(this, "ca-app-pub-3062739183422189~2459416261");
+		//MobileAds.initialize(this, "ca-app-pub-3062739183422189~2459416261");
+		MobileAds.initialize(this,"ca-app-pub-3062739183422189~2459416261");
 		mInterstitialAd = new InterstitialAd(this);
 		//mInterstitialAd.setAdUnitId("ca-app-pub-3062739183422189/6323969964");
 		mInterstitialAd.setAdUnitId("ca-app-pub-3062739183422189/4204754532"); // ta samaya reklama

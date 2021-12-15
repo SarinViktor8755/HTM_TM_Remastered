@@ -31,7 +31,7 @@ configurations {
 dependencies {
     implementation project(path: ':core')
     javabob project(path: ':core')
-    implementation 'org.json:json:20171018'
+    implementation 'org.json:json:20211205'
 
 }
 
