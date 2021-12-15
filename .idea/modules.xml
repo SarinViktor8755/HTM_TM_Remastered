@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HTM_TM_Remastered.iml" filepath="$PROJECT_DIR$/.idea/modules/HTM_TM_Remastered.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/HTM_TM_Remastered.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/HTM_TM_Remastered.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/HTM_TM_Remastered.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/HTM_TM_Remastered.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/HTM_TM_Remastered.desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/HTM_TM_Remastered.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/HTM_TM_Remastered.html.iml" filepath="$PROJECT_DIR$/.idea/modules/html/HTM_TM_Remastered.html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ios/HTM_TM_Remastered.ios.iml" filepath="$PROJECT_DIR$/.idea/modules/ios/HTM_TM_Remastered.ios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/HTM_TM_Remastered.server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/HTM_TM_Remastered.server.iml" />
+    </modules>
+  </component>
+</project>

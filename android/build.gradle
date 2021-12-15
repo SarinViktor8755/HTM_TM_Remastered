@@ -1,6 +1,6 @@
 android {
     buildToolsVersion "30.0.2"
-    compileSdkVersion 30
+    compileSdkVersion 31
 
 
 
@@ -99,7 +99,7 @@ eclipse.project.name = appName + "-android"
 dependencies {
 
 
-    implementation "com.google.android.gms:play-services-base:11.2.0"
+
     implementation "com.google.android.gms:play-services-ads:11.2.0"
     //compile 'com.android.billingclient:billing:$billing_version'
     api group: 'com.android.billingclient', name: 'billing', version: '2.2.1'

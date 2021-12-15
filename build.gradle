@@ -2,12 +2,15 @@ buildscript {
 
 
 
+
+
     repositories {
+        google()
         mavenLocal()
         mavenCentral()
         gradlePluginPortal()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        google()
+
     }
     dependencies {
         classpath 'org.wisepersist:gwt-gradle-plugin:1.0.13'
@@ -35,12 +38,28 @@ allprojects {
     }
 
     repositories {
-        mavenLocal()
+        google()  // Google's Maven repository
         mavenCentral()
-        google()
+
         gradlePluginPortal()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
+
+
+        mavenLocal()
+        jcenter()
+        subprojects {
+            project.configurations.all {
+                resolutionStrategy.eachDependency { details ->
+                    if (details.requested.group == 'com.google.android.gms'
+                            && !details.requested.name.contains('multidex')) {
+                        details.useVersion "12.0.1"
+                    }
+                }
+            }
+        }
+
 
     }
 }
@@ -54,7 +73,7 @@ project(":desktop") {
         api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
         api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
-        
+
     }
 }
 
@@ -62,6 +81,9 @@ project(":android") {
     apply plugin: "com.android.application"
 
     apply plugin: 'com.google.gms.google-services'
+
+// Work around for onesignal-gradle-plugin compatibility
+    googleServices.disableVersionCheck = true
 
     configurations { natives }
 
@@ -80,9 +102,14 @@ project(":android") {
         api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
 
         implementation platform('com.google.firebase:firebase-bom:29.0.2')
+        // Add the dependency for the Firebase SDK for Google Analytics
+        // When using the BoM, don't specify versions in Firebase dependencies
         implementation 'com.google.firebase:firebase-analytics'
 
+        implementation 'com.google.firebase:com.google.firebase: firebase-messaging:23.0.0'
 
+
+        implementation 'com.google.android.gms:play-services-ads:20.5.0'
 
     }
 }
@@ -96,7 +123,7 @@ project(":core") {
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
         api "com.esotericsoftware:kryonet:2.22.0-RC1"
-        
+
     }
 }
 
@@ -112,7 +139,7 @@ project(":ios") {
         api "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
         api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
-        
+
     }
 }
 
@@ -132,7 +159,6 @@ project(":html") {
         api "com.badlogicgames.gdx:gdx-box2d-gwt:$gdxVersion:sources"
         api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion:sources"
 
-        api 'com.google.android.gms:play-services-ads:10.2.4'
 
     }
 
